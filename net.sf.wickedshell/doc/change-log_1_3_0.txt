@@ -1,0 +1,23 @@
+*********************************
+** WickedShell - Release 1.3.0 **
+**         Change-Log          **
+*********************************
+
+This is release 1.3.0 of WickedShell. 
+
+* 11.04.2006 *
+- Refactored SystemShell handling
+
+* 12.04.2006 *
+- Shell Input handling improved
+  - <Processing command: ...> removed
+  - Allow user interaction (necessary at copy or rmdir for example)
+
+* 07.05.2006 *
+  - Encapsulated Shell defininition to allow different Shells to be provided
+
+* 24.05.2006 *
+  - Added support for Cygwin bash.exe
+
+* 25.05.2006 *
+  - Added support for MSYS sh.exe

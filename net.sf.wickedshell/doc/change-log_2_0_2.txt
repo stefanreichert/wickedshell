@@ -1,0 +1,27 @@
+*********************************
+** WickedShell - Release 2.0.2 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.2 of Wicked Shell. 
+
+* 12.05.2007 *
+    - Command History management refactored
+    - Command History dialog introduced
+
+* 14.05.2007 *
+    - Im- and Export static completion enabled
+
+* 19.05.2007 *
+    - XMLShellDescriptors introduced allowing 
+      custom ShellDescriptor definitions (Feature 
+      Request 1568006, Feature Request 1512102)
+
+* 09.06.2007 *
+    - Avoid execution of interrupt on CTRL+C which 
+      is not yet working
+    - Move cursor to valid position after key press 
+      (Feature Request 1733295)
+    - Adjusted classpath of domain bundle in order
+      to support Eclipse 3.3 (Bug 1672388)
+            

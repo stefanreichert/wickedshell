@@ -1,0 +1,9 @@
+*********************************
+** WickedShell - Release 1.0.0 **
+** 	      Change-Log	       **
+*********************************
+
+As this is the initial realease of 
+the WickedShell, there haven't been 
+any changes made and therefor there 
+is no change-log.

@@ -1,0 +1,15 @@
+*********************************
+** WickedShell - Release 2.0.4 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.4 of Wicked Shell. 
+
+* 02.06.2008 *
+	- Unregistering the primary shell view corrected
+	
+* 03.06.2008 *
+    - J2SE-1.5 compliance (Java 5 required now)
+    
+* 04.06.2008 *
+    - XML libraries reorganized to avoid class loader problems

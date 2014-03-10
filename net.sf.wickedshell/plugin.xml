@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="shell" name="net.sf.wickedshell.shell" schema="schema/shell.exsd"/>sd"/>
+     <extension
+           point="net.sf.wickedshell.shell">
+     	<descriptor
+            characterEncoding="CP437"
+            commandDelimiter="&amp;&amp;"
+            commandProvider="net.sf.wickedshell.facade.descriptor.command.CmdCommandProvider"
+            environmentalValueProvider="net.sf.wickedshell.facade.descriptor.environment.CmdShellEnvironmentalValueProvider"
+            executable="cmd.exe /a"
+            externalShellInvoker="net.sf.wickedshell.facade.descriptor.external.CmdExternalShellInvoker"
+            hasCustomRoot="false"
+            id="net.sf.wickedshell.shell.cmd"
+            isExecutedCommandProvided="true"
+            isUILineFeedProvided="true"
+            lineFeed="CR/LF"
+            name="Cmd.exe"
+            pathDelimiter="&gt;"
+            pathSeparator="BACKSLASH"
+            systemPathSeparator=";">
+           <operatingSystem name="Windows NT"/>
+           <operatingSystem name="Windows 2000"/>
+           <operatingSystem name="Windows 2003"/>
+           <operatingSystem name="Windows XP"/>
+           <operatingSystem name="Windows NT (unknown)"/>
+           <operatingSystem name="Windows Vista"/>
+           <operatingSystem name="Windows 7"/>
+           <executableFile
+                 extension=".exe"
+                 isBatchFile="false"
+                 description="Executable Files"/>
+           <executableFile
+                 extension=".com"
+                 isBatchFile="false"
+                 description="Command Files"/>
+           <executableFile
+                 extension=".bat"
+                 isBatchFile="true"
+                 description="Batch Files"/>
+           <executableFile
+                 extension=".cmd"
+                 isBatchFile="true"
+                 description="Cmd Files"/>
+           <operatingSystem name="Windows Server 2003"/>
+        </descriptor>
+        <descriptor
+              characterEncoding="CP437"
+              commandDelimiter="&amp;&amp;"
+              commandProvider="net.sf.wickedshell.facade.descriptor.command.CmdCommandProvider"
+              environmentalValueProvider="net.sf.wickedshell.facade.descriptor.environment.CommandShellEnvironmentalValueProvider"
+              executable="command.com"
+              externalShellInvoker="net.sf.wickedshell.facade.descriptor.external.CommandExternalShellInvoker"
+              hasCustomRoot="false"
+              id="net.sf.wickedshell.shell.cmd"
+              isExecutedCommandProvided="true"
+              isUILineFeedProvided="true"
+              lineFeed="CR/LF"
+              name="Command.com"
+              pathDelimiter="&gt;"
+              pathSeparator="BACKSLASH"
+              systemPathSeparator=";">
+           <operatingSystem name="Windows 95"/>
+           <operatingSystem name="Windows 98"/>
+           <executableFile
+                 extension=".exe"
+                 isBatchFile="false"
+                 description="Executable Files"/>
+           <executableFile
+                 extension=".com"
+                 isBatchFile="false"
+                 description="Command Files"/>
+           <executableFile
+                 extension=".bat"
+                 isBatchFile="true"
+                 description="Batch Files"/>
+           <executableFile
+                 extension=".cmd"
+                 isBatchFile="true"
+                 description="Cmd Files"/>
+        </descriptor>
+        <descriptor
+              characterEncoding="UTF-8"
+              commandDelimiter="|"
+              commandProvider="net.sf.wickedshell.facade.descriptor.command.BashCommandProvider"
+              executable="bash -i"
+              hasCustomRoot="false"
+              id="net.sf.wickedshell.shell.bash"
+              isExecutedCommandProvided="false"
+              isUILineFeedProvided="false"
+              lineFeed="LF only"
+              name="Bash (Root)"
+              pathDelimiter="&gt;_"
+              pathSeparator="SLASH"
+              systemPathSeparator=";">
+           <operatingSystem name="Linux"/>
+           <operatingSystem name="Mac OS X"/>
+           <executableFile
+                 description="Shell Files"
+                 extension=".sh"
+                 isBatchFile="true"/>
+        </descriptor>
+        <descriptor
+              characterEncoding="UTF-8"
+              commandDelimiter="|"
+              commandProvider="net.sf.wickedshell.facade.descriptor.command.BashCommandProvider"
+              executable="bash -i"
+              hasCustomRoot="false"
+              id="net.sf.wickedshell.shell.bash.user"
+              isExecutedCommandProvided="false"
+              isUILineFeedProvided="false"
+              lineFeed="LF only"
+              name="Bash"
+              pathDelimiter="$_"
+              pathSeparator="SLASH"
+              systemPathSeparator=";">
+           <operatingSystem name="Linux"/>
+           <operatingSystem name="Mac OS X"/>
+           <executableFile
+                 description="Shell Files"
+                 extension=".sh"
+                 isBatchFile="true"/>
+        </descriptor>
+     </extension>
+     <extension
+           point="org.eclipse.core.runtime.preferences">
+        <initializer class="net.sf.wickedshell.preferences.PreferenceInitializer"/>
+     </extension>
+</plugin>

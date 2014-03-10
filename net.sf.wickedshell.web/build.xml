@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="net.sf.wickedshell.web" default="publish.web" basedir=".">
+
+	<!-- Updatesite -->
+	<property name="web.dir" value="../net.sf.wickedshell.web" />
+	<property file="${web.dir}/web.properties" />
+
+	<target name="publish.web">
+		<antcall target="publish.web.wickedshell.net"/>
+		<antcall target="publish.web.sourceforge.net"/>
+	</target>
+	
+	<target name="publish.web.sourceforge.net">
+		<echo message="Login to ${host.sourceforge} as ${username.sourceforge}"/>
+		<scp verbose="true" trust="true" todir="${username.sourceforge}:${password.sourceforge}@${host.sourceforge}:${base.sourceforge}">
+			<fileset dir="sourceforge.net" >
+				<include name="style/**.*"/>
+				<include name="**.html"/>
+			</fileset>
+		</scp>
+	</target>
+	
+	<target name="publish.web.wickedshell.net">
+		<echo message="Login to ${host.wickedshell} as ${username.wickedshell}"/>
+		<ftp verbose="true" password="${password.wickedshell}" server="${host.wickedshell}" userid="${username.wickedshell}" binary="false" newer="true">
+			<fileset dir="wickedshell.net" >
+				<include name="style/**.*"/>
+				<include name="*.html"/>
+			</fileset>
+		</ftp>
+		<ftp verbose="true" password="${password.wickedshell}" server="${host.wickedshell}" userid="${username.wickedshell}" binary="true" newer="true" >
+			<fileset dir="wickedshell.net" >
+				<include name="documentation/**.*"/>
+				<include name="img/**.*"/>
+				<include name="favicon.ico"/>
+			</fileset>
+		</ftp>
+	</target>
+	
+</project>

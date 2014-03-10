@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://sf.net/wickedshell/domain/configuration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="shellDescriptorConfiguration" type="con:shellDescriptorConfiguration" xmlns:con="http://sf.net/wickedshell/domain/configuration"/>
+  <xs:complexType name="shellDescriptorConfiguration">
+    <xs:sequence>
+      <xs:element type="con:shellDescriptorProperties" name="shellDescriptorProperties" maxOccurs="unbounded" minOccurs="0" xmlns:con="http://sf.net/wickedshell/domain/configuration"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="shellDescriptorProperties">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="shellDescriptorId" use="optional"/>
+        <xs:attribute type="xs:string" name="rootDirectory" use="optional"/>
+        <xs:attribute type="xs:string" name="isOSDefault" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,10 @@
+*********************************
+** WickedShell - Release 2.0.5 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.5 of Wicked Shell. 
+
+* 02.12.2009 *
+	- Windows 7 support (Bugfix 2897309)
+	- Allow editing existing static completions (Feature Request 2897085)

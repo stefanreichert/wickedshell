@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wicked Shell Plug-in
+Bundle-SymbolicName: net.sf.wickedshell; singleton:=true
+Bundle-Version: 2.0.7
+Bundle-Activator: net.sf.wickedshell.ShellPlugin
+Bundle-Vendor: Stefan Reichert
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.apache.commons.collections,
+ net.sf.wickedshell.domain,
+ org.eclipse.jface.text,
+ org.eclipse.ui.workbench.texteditor
+Eclipse-LazyStart: true
+Export-Package: net.sf.wickedshell,
+ net.sf.wickedshell.action.batch,
+ net.sf.wickedshell.action.shell,
+ net.sf.wickedshell.facade,
+ net.sf.wickedshell.facade.descriptor,
+ net.sf.wickedshell.facade.descriptor.command,
+ net.sf.wickedshell.facade.descriptor.environment,
+ net.sf.wickedshell.facade.descriptor.executableFile,
+ net.sf.wickedshell.facade.descriptor.external,
+ net.sf.wickedshell.facade.history,
+ net.sf.wickedshell.facade.io,
+ net.sf.wickedshell.listener,
+ net.sf.wickedshell.preferences,
+ net.sf.wickedshell.provider,
+ net.sf.wickedshell.ui.batch,
+ net.sf.wickedshell.ui.preferences,
+ net.sf.wickedshell.ui.shell,
+ net.sf.wickedshell.ui.shell.viewer,
+ net.sf.wickedshell.ui.shell.viewer.adapter,
+ net.sf.wickedshell.ui.shell.viewer.proposal,
+ net.sf.wickedshell.ui.shell.viewer.text,
+ net.sf.wickedshell.util,
+ net.sf.wickedshell.util.filter
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

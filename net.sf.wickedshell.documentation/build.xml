@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="net.sf.wickedshell.documentation" default="build.documentation.pdf" basedir=".">
+
+	<!-- Saxon -->
+	<property name="saxon.dir" value="../com.icl.saxon" />
+	<property file="${saxon.dir}/saxon.lib.properties" />
+	<path id="saxon.classpath">
+		<pathelement location="${saxon.lib.path}" />
+		<pathelement path="${java.class.path}" />
+	</path>
+
+	<!-- FOP -->
+	<property name="fop.dir" value="../org.apache.fop" />
+	<property file="${fop.dir}/fop.lib.properties" />
+	<path id="fop.classpath">
+		<pathelement path="${fop.lib.path}" />
+		<pathelement path="${java.class.path}" />
+	</path>
+
+	<!-- DocBook -->
+	<property name="docbook.dir" value="../net.sourceforge.docbook" />
+	<property file="${docbook.dir}/docbook.lib.properties" />
+
+	<!-- Wicked Shell Documentation -->
+	<property file="documentation.properties" />
+
+	<target name="init">
+		<mkdir dir="${documentation.target.dir}" />
+	</target>
+	
+	<target name="build.documentation.pdf" depends="init">
+		<mkdir dir="${documentation.tmp.dir}" />
+		<mkdir dir="${documentation.figures.tmp.dir}" />
+		<copy todir="${documentation.figures.tmp.dir}" overwrite="true">
+			<fileset dir="${documentation.figures.src.dir}">
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<java fork="true" dir="." failonerror="true" classname="com.icl.saxon.StyleSheet">
+			<classpath refid="saxon.classpath" />
+			<arg value="-o" />
+			<arg value="${documentation.fo.file}" />
+			<arg value="${documentation.docbook.file}" />
+			<arg value="${documentation.fop.xsl.stylesheet}" />
+			<arg value="draft.mode=no" />
+			<arg value="paper.type=A4" />
+			<arg value="l10n.gentext.language=en" />
+		</java>
+		<java fork="true" dir="." failonerror="true" classname="org.apache.fop.apps.Fop">
+			<classpath refid="fop.classpath" />
+			<arg value="${documentation.fo.file}" />
+			<arg value="${documentation.pdf.file}" />
+		</java>
+		<delete dir="${documentation.tmp.dir}" />
+	</target>
+
+
+	<target name="copy.documentation.to.web" depends="build.documentation.pdf">
+		<copy file="${documentation.pdf.file}" todir="${project.web.doc.home}" />
+	</target>
+</project>

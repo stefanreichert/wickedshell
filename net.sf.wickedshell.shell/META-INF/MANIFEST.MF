@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wicked Shell custom shells Plug-in
+Bundle-SymbolicName: net.sf.wickedshell.shell; singleton:=true
+Bundle-Version: 2.0.7
+Bundle-Vendor: Stefan Reichert
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ net.sf.wickedshell,
+ net.sf.wickedshell.domain
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

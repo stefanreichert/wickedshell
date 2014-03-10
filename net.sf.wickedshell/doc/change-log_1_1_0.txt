@@ -1,0 +1,17 @@
+*********************************
+** WickedShell - Release 1.1.0 **
+** 	      Change-Log	       **
+*********************************
+
+This is release 1.1.0 of WickedShell. 
+
+* 21.12.2005 * 
+- History support added for the shell (Arrow Up/Down functionality)
+- Path Delimiter is now provided by SystemShell to support different OS
+- Added Linux specific information to the SystemShell (shell command and delimiter)
+
+* 22.12.2005 *
+- Shell Error Display introduced
+
+* 25.03.2006 *
+- Preferences Page introduced - Allow customizing of the shell's command completion

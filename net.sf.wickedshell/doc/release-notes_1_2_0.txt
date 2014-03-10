@@ -1,0 +1,12 @@
+*********************************
+** WickedShell - Release 1.2.0 **
+**        Release-Notes        **
+*********************************
+
+This is release 1.2.0 of WickedShell. 
+
+It contains the following enhancements:
+
+	- New icons introduced
+	- Enviromental values for command completion
+	- Navigator/Package Explorer integration

@@ -1,0 +1,14 @@
+*********************************
+** WickedShell - Release 2.0.2 **
+**        Release Notes        **
+*********************************
+
+This is release 2.0.2 of Wicked Shell. 
+
+It contains the following enhancements:
+
+    - Im- and Export static completion enabled
+    - Custom ShellDescriptors introduced (Feature 
+      Request 1568006, Feature Request 1512102)
+    - Eclipse 3.3 compatibility restored (Bugfix 1672388)
+    - Convenient cursor behaviour (Feature Request 1733295)

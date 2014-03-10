@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+        <objectContribution
+              adaptable="false"
+              id="org.eclipse.core.resources.IFolder"
+              objectClass="org.eclipse.core.resources.IFolder">
+           <action
+                 class="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 icon="img/shellChangeToFolder.gif"
+                 id="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 label="Change to folder in Shell"
+                 menubarPath="additions"
+                 style="push"/>
+        </objectContribution>
+        <objectContribution
+              adaptable="false"
+              id="org.eclipse.core.resources.IFile"
+              objectClass="org.eclipse.core.resources.IFile">
+           <action
+                 class="net.sf.wickedshell.resource.action.AddBatchFileToBatchViewAction"
+                 icon="img/batchView.gif"
+                 id="net.sf.wickedshell.resource.action.AddBatchFileToBatchViewAction"
+                 label="Add file to Batch Files"
+                 menubarPath="additions"
+                 style="push"/>
+           <action
+                 class="net.sf.wickedshell.resource.action.RunBatchFileInShellAction"
+                 icon="img/batchRun.gif"
+                 id="net.sf.wickedshell.resource.action.RunBatchFileInShellAction"
+                 label="Run file in Shell"
+                 style="push"/>
+           <action
+                 class="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 icon="img/shellChangeToFolder.gif"
+                 id="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 label="Change to parent folder in Shell"
+                 menubarPath="additions"
+                 style="push"/>
+        </objectContribution>
+        <objectContribution
+              adaptable="false"
+              id="org.eclipse.core.resources.IProject"
+              objectClass="org.eclipse.core.resources.IProject">
+           <action
+                 class="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 icon="img/shellChangeToFolder.gif"
+                 id="net.sf.wickedshell.resource.action.ChangeToFolderInShellAction"
+                 label="Change to folder in Shell"
+                 menubarPath="additions"
+                 style="push"/>
+        </objectContribution>
+   </extension>
+</plugin>

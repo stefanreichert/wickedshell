@@ -1,0 +1,32 @@
+*********************************
+** WickedShell - Release 1.3.0 **
+**        Release-Notes        **
+*********************************
+
+This is release 1.3.0 of WickedShell. 
+
+It contains the following enhancements:
+
+    - Improved input handling
+    - Support for Cygwin bash.exe added
+        It is recommended to modify the PS1 prompting enviromental value 
+        to avoid any character output of the prompt (such as ASCII escape 
+        characters) that cannot be displayed by SWT's Text widget. 
+        Otherwise it looks funny...
+        To do so, just define the PS1 value in the '.bashrc' file of your
+        home directory (PS1=\\t' '\\u'@'\\H\\r\\n\\w'$ ' as a suggestion).
+        Please pay attention, that your prompt ends with '$ ', as Wicked 
+        Shell uses this for path delimiting.
+        To make command completion work, the last line of the prompt must
+        consist of the current path and the suffix '$ ' (see above).
+    - Support for MSYS sh.exe added
+        It is recommended to modify the PS1 prompting enviromental value 
+        to avoid any character output of the prompt (such as ASCII escape 
+        characters) that cannot be displayed by SWT's Text widget. 
+        Otherwise it looks funny...
+        To do so, just define the PS1 value in the 'profile' file of the
+        etc directory (PS1=\\t' '\\u'@'\\H\\r\\n\\w'$ ' as a suggestion).
+        Please pay attention, that your prompt ends with '$ ', as Wicked 
+        Shell uses this for path delimiting.
+        To make command completion work, the last line of the prompt must
+        consist of the current path and the suffix '$ ' (see above).

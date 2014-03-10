@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/net.sf.wickedshell.feature_2.0.7.jar" id="net.sf.wickedshell.feature" version="2.0.7" os="linux,macosx,win32">
+      <category name="net.sf.wickedshell"/>
+   </feature>
+   <category-def name="net.sf.wickedshell" label="Wicked Shell"/>
+</site>

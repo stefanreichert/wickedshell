@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+        <objectContribution
+              adaptable="false"
+              id="org.eclipse.jdt.core.IJavaElement"
+              objectClass="org.eclipse.jdt.core.IJavaElement">
+           <action
+                 class="net.sf.wickedshell.jdt.action.ChangeToFolderInShellAction"
+                 icon="img/shellChangeToFolder.gif"
+                 id="net.sf.wickedshell.jdt.action.ChangeToFolderInShellAction"
+                 label="Change to folder in Shell"
+                 menubarPath="additions"
+                 style="push"/>
+        </objectContribution>
+   </extension>
+</plugin>

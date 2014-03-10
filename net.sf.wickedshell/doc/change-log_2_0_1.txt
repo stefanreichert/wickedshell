@@ -1,0 +1,36 @@
+*********************************
+** WickedShell - Release 2.0.1 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.1 of Wicked Shell. 
+
+* 16.11.2006 *
+    - PreferencesPage splitted into parts
+    - ErrorLog refactored to show Exceptions
+
+* 20.11.2006 *
+    - System path completions entries corrected (Bugfix 1587183)
+
+* 20.03.2007 *
+    - ShellView can be renamed (FeatureRequest 1610983)
+    
+* 21.03.2007 *
+    - Color settings corrected (Bugfix 1593473)
+    - Linux ShellDescriptor fixed (Bugfix 1674517)
+    - Use the entered installation path for executable invocation (Bugfix 1638098)
+
+* 22.03.2007
+	- Allow invocation of an external shell via shortcut or command extension (Feature Request 1599616)
+
+* 25.03.2007 *
+    - Avoid Exception on wrong line delimiter (Bugfix 1606478)
+    - Correct the handling of the character encoding (Bugfix 1587755)
+    - 'Change to Folder' corrected (Bugfix 1589856)
+    - Eclipse 3.3 M6 compatibility restored (Bugfix 1672388)
+    
+* 30.03.2007 *
+    - Added 'Active Shell' Submenu to Shell View's Menu Bar    
+
+* 29.04.2007 *
+    - Exception handling / Logging enhanced

@@ -1,0 +1,159 @@
+.static{
+	background-color : #306030;
+}
+
+.fade_one{
+	background-color : #609060;
+	line-height : 3px;
+}
+
+.fade_two{
+	background-color : #90C090;
+	line-height : 3px;
+}
+
+.fade_three{
+	background-color : #C0F0C0;
+	line-height : 3px;
+}
+
+.header{
+	font-family : Tahoma;
+	font-size : large;
+	font-weight : bold;
+	color: White;
+}
+.subheader{
+	font-family : Tahoma;	
+	color: White;
+}
+.page_header{
+	font-family : Tahoma;
+	font-weight : bold;
+	color : #306030;
+	font-size : larger;
+}
+.content{
+	font-family : Tahoma;	
+}
+.comment{
+	font-family : Tahoma;
+	font-size : smaller;
+}
+.emphasizer{
+	font-family : Tahoma;
+	font-weight : bold;
+}
+.disclaimer{
+	font-family : Tahoma;
+	font-weight : lighter;
+	font-size : xx-small;
+}
+.sourceforgehomelink{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : #306030;
+	text-decoration : none;
+}
+.sourceforgehomelink:link{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : #306030;
+	text-decoration : none;
+}
+.sourceforgehomelink:hover{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : Lime;
+	text-decoration : none;
+}
+.sourceforgehomelink:visited{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : #306030;
+	text-decoration : none;
+}
+.sourceforgehomelink:active{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : #306030;
+	text-decoration : none;
+}
+.sourceforgehomelink:focus{
+	font-family : Tahoma;
+	font-weight : bold;
+	font-size : x-small;
+	color : #306030;
+	text-decoration : none;
+}
+.link{
+	font-family : Tahoma;
+	color : #609060;
+	text-decoration : none;
+}
+.link:link{
+	font-family : Tahoma;
+	color : #609060;
+	text-decoration : none;
+}
+.link:hover{
+	font-family : Tahoma;
+	color : Lime;
+	text-decoration : none;
+}
+.link:visited{
+	font-family : Tahoma;
+	color : #609060;
+	text-decoration : none;
+}
+.link:active{
+	font-family : Tahoma;
+	color : #609060;
+	text-decoration : none;
+}
+.link:focus{
+	font-family : Tahoma;
+	color : #609060;
+	text-decoration : none;
+}
+.menulink{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : White;
+}
+.menulink:link{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : White;
+}
+.menulink:hover{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : Lime;
+}
+.menulink:visited{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : White;
+}
+.menulink:active{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : White;
+}
+.menulink:focus{
+	font-family : Tahoma;
+	font-weight : bolder;
+	text-decoration : none;
+	color : White;
+}

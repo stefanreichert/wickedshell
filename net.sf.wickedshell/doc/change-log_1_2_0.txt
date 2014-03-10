@@ -1,0 +1,19 @@
+*********************************
+** WickedShell - Release 1.2.0 **
+**         Change-Log          **
+*********************************
+
+This is release 1.2.0 of WickedShell. 
+
+* 28.03.2006 *
+- New icons introduced
+- ShellErrorDialog extended to display all Exceptions occured on startup
+
+* 04.04.2006 *
+- Command completion extended by enviromental values
+
+* 07.04.2006 *
+- Integration in Resource Navigator and Package Explorer
+
+* 10.04.2006 *
+- Added Windows 2003 as considered OS

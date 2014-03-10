@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wicked Shell Test Plugin
+Bundle-SymbolicName: net.sf.wickedshell.test
+Bundle-Version: 2.0.7
+Bundle-ClassPath: test.jar
+Bundle-Localization: plugin
+Bundle-Vendor: Stefan Reichert
+Require-Bundle: net.sf.wickedshell,
+ net.sf.wickedshell.domain,
+ net.sf.wickedshell.jdt,
+ net.sf.wickedshell.resources,
+ net.sf.wickedshell.shell,
+ net.sf.wickedshell.ui,
+ org.apache.xmlbeans,
+ org.junit,
+ org.apache.commons.collections,
+ org.eclipse.jface
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

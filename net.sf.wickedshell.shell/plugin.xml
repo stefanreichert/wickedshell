@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension
+           point="net.sf.wickedshell.shell">
+        <descriptor
+              binariesDirectory="bin"
+              characterEncoding="US-ASCII"
+              commandDelimiter="|"
+              commandProvider="net.sf.wickedshell.facade.descriptor.command.CygwinCommandProvider"
+              environmentalValueProvider="net.sf.wickedshell.facade.descriptor.environment.CygwinShellEnvironmentalValueProvider"
+              executable="bash.exe -l -i"
+              externalShellInvoker="net.sf.wickedshell.facade.descriptor.external.CygwinExternalShellInvoker"
+              hasCustomRoot="true"
+              id="net.sf.wickedshell.shell.cygwin.bash"
+              isExecutedCommandProvided="true"
+              isUILineFeedProvided="true"
+              lineFeed="LF only"
+              name="Cygwin - Bash"
+              pathDelimiter="_$_"
+              pathSeparator="SLASH"
+              systemPathSeparator=";">
+           <operatingSystem name="Windows 95"/>
+           <operatingSystem name="Windows 98"/>
+           <operatingSystem name="Windows NT"/>
+           <operatingSystem name="Windows 2000"/>
+           <operatingSystem name="Windows 2003"/>
+           <operatingSystem name="Windows XP"/>
+           <operatingSystem name="Windows NT (unknown)"/>
+           <operatingSystem name="Windows Vista"/>
+           <operatingSystem name="Windows 7"/>
+           <executableFile
+                 description="Shell Files"
+                 extension=".sh"
+                 isBatchFile="true"/>
+           </descriptor>
+           <descriptor
+              binariesDirectory="bin"
+              characterEncoding="US-ASCII"
+              commandDelimiter="|"
+              commandProvider="net.sf.wickedshell.facade.descriptor.command.CygwinCommandProvider"
+              environmentalValueProvider="net.sf.wickedshell.facade.descriptor.environment.CygwinShellEnvironmentalValueProvider"
+              executable="sh.exe -l -i"
+              externalShellInvoker="net.sf.wickedshell.facade.descriptor.external.CygwinExternalShellInvoker"
+              hasCustomRoot="true"
+              id="net.sf.wickedshell.shell.cygwin.sh"
+              isExecutedCommandProvided="true"
+              isUILineFeedProvided="true"
+              lineFeed="LF only"
+              name="Cygwin - SH"
+              pathDelimiter="_$_"
+              pathSeparator="SLASH"
+              systemPathSeparator=";">
+           <operatingSystem name="Windows 95"/>
+           <operatingSystem name="Windows 98"/>
+           <operatingSystem name="Windows NT"/>
+           <operatingSystem name="Windows 2000"/>
+           <operatingSystem name="Windows 2003"/>
+           <operatingSystem name="Windows XP"/>
+           <operatingSystem name="Windows NT (unknown)"/>
+           <operatingSystem name="Windows Vista"/>
+           <operatingSystem name="Windows 7"/>
+           <executableFile
+                 description="Shell Files"
+                 extension=".sh"
+                 isBatchFile="true"/>
+           </descriptor>
+           <descriptor
+                 binariesDirectory="bin"
+                 characterEncoding="US-ASCII"
+                 commandDelimiter="|"
+                 commandProvider="net.sf.wickedshell.facade.descriptor.command.MSysCommandProvider"
+                 environmentalValueProvider="net.sf.wickedshell.facade.descriptor.environment.MSysShellEnvironmentalValueProvider"
+                 executable="sh.exe -login -i"
+                 externalShellInvoker="net.sf.wickedshell.facade.descriptor.external.MSysExternalShellInvoker"
+                 hasCustomRoot="true"
+                 id="net.sf.wickedshell.shell.msys.sh"
+                 isExecutedCommandProvided="true"
+                 isUILineFeedProvided="true"
+                 lineFeed="LF only"
+                 name="Minimal SYStem - SH"
+                 pathDelimiter="_$_"
+                 pathSeparator="SLASH"
+                 systemPathSeparator=";">
+           <operatingSystem name="Windows 95"/>
+           <operatingSystem name="Windows 98"/>
+           <operatingSystem name="Windows NT"/>
+           <operatingSystem name="Windows 2000"/>
+           <operatingSystem name="Windows 2003"/>
+           <operatingSystem name="Windows XP"/>
+           <operatingSystem name="Windows NT (unknown)"/>
+           <operatingSystem name="Windows Vista"/>
+           <operatingSystem name="Windows 7"/>
+           <executableFile
+                 description="Shell Files"
+                 extension=".sh"
+                 isBatchFile="true"/>
+           </descriptor>
+     </extension>
+</plugin>

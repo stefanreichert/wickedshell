@@ -1,0 +1,29 @@
+*********************************
+** WickedShell - Release 2.0.3 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.3 of Wicked Shell. 
+
+* 29.06.2007 *
+    - Avoid invalid characters in XML (Bugfix 1745089)
+    
+* 06.08.2007 *
+    - Provide confirmation dialog on closing of a detached ShellView (Bugfix 1745173)
+    
+* 07.08.2007 *
+    - Provide a simple validation of custom shells (mandatory fields)
+
+* 12.08.2007 *       
+    - "Add static completion" corrected (Bugfix 1772183)
+    - Common icon for static completions introduced
+
+* 23.08.2007 *       
+	- Open console for resource (files) (Feature Request 1778454)
+	
+* 20.02.2008 *
+	- Secured loading of the stored Wicked Shell configuration (auto reset on error)
+	- Provide selection for shell when multiple shells are open (Feature Request 1779965 & 1560429)
+	
+* 30.05.2008 *
+	- List of supported OSes corrected (Unix (like) OSes removed, Windows Server 2003 added)

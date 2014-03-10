@@ -1,0 +1,17 @@
+*********************************
+** WickedShell - Release 2.0.0 **
+**        Release-Notes        **
+*********************************
+
+This is release 2.0.0 of Wicked Shell. 
+
+It contains the following enhancements:
+
+    - Extension Point provided for definition 
+      of Shell descriptors
+    - Shell dependant management of Batch Files
+    - Introduced org.apache.xmlbeans to substitute 
+      object serialisation
+    - Splitted shell facade (IShellFacade) and UI 
+      (IShellViewer), Wicked Shell can now be used
+      as component

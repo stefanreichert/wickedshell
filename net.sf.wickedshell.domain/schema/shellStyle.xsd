@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://sf.net/wickedshell/domain/style" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="shellStyle" type="sty:shellStyle" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+  <xs:complexType name="colorDescriptor">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="red" use="optional"/>
+        <xs:attribute type="xs:string" name="blue" use="optional"/>
+        <xs:attribute type="xs:string" name="green" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="shellStyle">
+    <xs:sequence>
+      <xs:element type="sty:fontDescriptor" name="fontDescriptor" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+      <xs:element type="sty:backgroundColor" name="backgroundColor" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+      <xs:element type="sty:foregroundColor" name="foregroundColor" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="backgroundColor">
+    <xs:sequence>
+      <xs:element type="sty:colorDescriptor" name="colorDescriptor" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="foregroundColor">
+    <xs:sequence>
+      <xs:element type="sty:colorDescriptor" name="colorDescriptor" xmlns:sty="http://sf.net/wickedshell/domain/style"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fontDescriptor">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name"/>
+        <xs:attribute type="xs:string" name="height"/>
+        <xs:attribute type="xs:string" name="style"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

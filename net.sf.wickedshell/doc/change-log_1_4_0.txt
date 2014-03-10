@@ -1,0 +1,33 @@
+*********************************
+** WickedShell - Release 1.4.0 **
+**         Change-Log          **
+*********************************
+
+This is release 1.4.0 of WickedShell. 
+
+* 31.05.2006 *
+    - Add preferences for foreground, background and font
+      (Feature Request 1498053)
+    
+* 03.06.2006 *
+    - Refactoring location of constants
+    - Add actions for stop, restart and clear shell in the
+      toolbar
+
+* 23.06.2006 *
+    - Add completion for cascading folder and file parts 
+      (e.g. cd temp/foo/b)
+
+* 02.08.2006 *
+    - Refactored preferences management
+
+* 07.08.2006 *
+    - Refactored Batch View
+    - Introduced parameters for listed Batch Files
+      (Feature Request 1533273)
+    - Provide 'Browse...' Button for Shell root directory
+      selection in the preferences page
+
+* 08.08.2006 *
+    - Keep history of executed commands introduced
+    - Allow multiple Shell views

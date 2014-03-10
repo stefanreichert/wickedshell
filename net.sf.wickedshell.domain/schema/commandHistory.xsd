@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://sf.net/wickedshell/domain/command" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="commandHistoryList" type="com:commandHistoryList" xmlns:com="http://sf.net/wickedshell/domain/command"/>
+  <xs:complexType name="commandDescriptor">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="command" use="optional"/>
+        <xs:attribute type="xs:string" name="shellDescriptorId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="commandHistoryList">
+    <xs:sequence>
+      <xs:element type="com:commandDescriptor" name="commandDescriptor" maxOccurs="unbounded" minOccurs="0" xmlns:com="http://sf.net/wickedshell/domain/command"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

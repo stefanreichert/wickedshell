@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="net.sf.wickedshell.category"
+            class="net.sf.wickedshell.ui.shell.ShellView"
+            icon="img/shellView.gif"
+            id="net.sf.wickedshell.ui.shell.ShellView"
+            name="Shell"/>
+      <category
+            id="net.sf.wickedshell.category"
+            name="Wicked Shell"/>
+      <view
+            category="net.sf.wickedshell.category"
+            class="net.sf.wickedshell.ui.batch.BatchView"
+            icon="img/batchView.gif"
+            id="net.sf.wickedshell.ui.batch.BatchView"
+            name="Batch Files"/>
+   </extension>
+     <extension
+           point="org.eclipse.ui.preferencePages">
+        <page
+              class="net.sf.wickedshell.ui.preferences.WickedShellPreferencePage"
+              id="net.sf.wickedshell.ui.preferences.WickedShellPreferencePage"
+              name="Wicked Shell"/>
+        <page
+              category="net.sf.wickedshell.ui.preferences.WickedShellPreferencePage"
+              class="net.sf.wickedshell.ui.preferences.WickedShellCustomShellsPreferencesPage"
+              id="net.sf.wickedshell.ui.preferences.WickedShellCustomShellsPreferencesPage"
+              name="Custom Shells"/>
+        <page
+              category="net.sf.wickedshell.ui.preferences.WickedShellPreferencePage"
+              class="net.sf.wickedshell.ui.preferences.WickedShellStylePreferencePage"
+              id="net.sf.wickedshell.ui.preferences.WickedShellStylePreferencePage"
+              name="Style"/>
+        <page
+              category="net.sf.wickedshell.ui.preferences.WickedShellPreferencePage"
+              class="net.sf.wickedshell.ui.preferences.WickedShellStaticCompletionsPreferencePage"
+              id="net.sf.wickedshell.ui.preferences.WickedShellStaticCompletionsPreferencePage"
+              name="Static Completions"/>
+     </extension>
+     <extension
+           point="org.eclipse.ui.popupMenus">
+        <viewerContribution
+              id="net.sf.wickedshell.ui.batch.BatchView.viewer"
+              targetID="net.sf.wickedshell.ui.batch.BatchView.viewer">
+           <action
+                 class="net.sf.wickedshell.action.batch.RemoveBatchFileAction"
+                 enablesFor="1"
+                 icon="img/batchRemove.gif"
+                 id="net.sf.wickedshell.action.batch.RemoveBatchFileAction"
+                 label="Remove Batch File from list"
+                 menubarPath="listentry"
+                 style="push"
+                 tooltip="Removes the selected Batch File from the list of Batch Files"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.SetParametersForBatchFileAction"
+                 enablesFor="1"
+                 icon="img/batchParameter.gif"
+                 id="net.sf.wickedshell.action.batch.SetParametersForBatchFileAction"
+                 label="Set parameters for Batch File"
+                 menubarPath="listentry"
+                 style="push"
+                 tooltip="Set parameters for the selected Batch File"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.RunBatchFileAction"
+                 enablesFor="1"
+                 icon="img/batchRun.gif"
+                 id="net.sf.wickedshell.action.batch.RunBatchFileAction"
+                 label="Run Batch File in Shell"
+                 menubarPath="listentry"
+                 style="push"
+                 tooltip="Runs the selected Batch File in the (primary) Shell"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.SelectBatchFileAction"
+                 icon="img/batchSelect.gif"
+                 id="net.sf.wickedshell.action.batch.SelectBatchFileAction"
+                 label="Select existing Batch File"
+                 menubarPath="add"
+                 style="push"
+                 tooltip="Select an existing Batch File to add it to the list of Batch Files"/>
+        </viewerContribution>
+     </extension>
+     <extension
+           point="org.eclipse.ui.viewActions">
+        <viewContribution
+              id="net.sf.wickedshell.ui.batch.BatchView"
+              targetID="net.sf.wickedshell.ui.batch.BatchView">
+           <action
+                 class="net.sf.wickedshell.action.batch.RemoveAllBatchFilesAction"
+                 icon="img/batchRemoveAll.gif"
+                 id="net.sf.wickedshell.action.batch.RemoveAllBatchFilesAction"
+                 label="Remove all Batch Files from list"
+                 style="push"
+                 toolbarPath="listentry"
+                 tooltip="Removes all Batch Files from the list of Batch Files"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.RemoveBatchFileAction"
+                 icon="img/batchRemove.gif"
+                 id="net.sf.wickedshell.action.batch.RemoveBatchFileAction"
+                 label="Remove Batch File from list"
+                 toolbarPath="listentry"
+                 style="push"
+                 tooltip="Removes the selected Batch File from the list of Batch Files"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.SelectBatchFileAction"
+                 icon="img/batchSelect.gif"
+                 id="net.sf.wickedshell.action.batch.SelectBatchFileAction"
+                 label="Select existing Batch File"
+                 toolbarPath="add"
+                 style="push"
+                 tooltip="Select an existing Batch File to add it to the list of Batch Files"/>
+           <action
+                 class="net.sf.wickedshell.action.batch.ShowShellAction"
+                 icon="img/shellShow.gif"
+                 id="net.sf.wickedshell.action.batch.ShowShellAction"
+                 label="Show the Shell"
+                 toolbarPath="general"
+                 style="push"
+                 tooltip="Shows the (primary) Shell, if no primary Shell exists, one is opened"/>
+        </viewContribution>
+        <viewContribution
+              id="net.sf.wickedshell.ui.shell.ShellView"
+              targetID="net.sf.wickedshell.ui.shell.ShellView">
+           <action
+                 class="net.sf.wickedshell.action.shell.OpenAdditionalShellAction"
+                 icon="img/shellOpenAdditional.gif"
+                 id="net.sf.wickedshell.action.shell.OpenAdditionalShellAction"
+                 label="Open additional Shell"
+                 menubarPath="manage_external"
+                 style="push"
+                 tooltip="Opens an additional Shell"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.OpenExternalShellAction"
+                 icon="img/shellOpenExternal.gif"
+                 id="net.sf.wickedshell.action.shell.OpenExternalShellAction"
+                 label="Open external Shell"
+                 menubarPath="manage_external"
+                 style="push"
+                 tooltip="Opens an external shell"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.RestartShellAction"
+                 icon="img/shellRestart.gif"
+                 id="net.sf.wickedshell.action.shell.RestartShellAction"
+                 label="Restart Shell"
+                 menubarPath="manage_internal"
+                 style="push"
+                 tooltip="Restarts the Shell by terminating and restarting the Shell"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.ExportCommandHistoryAction"
+                 icon="img/shellExportOutput.gif"
+                 id="net.sf.wickedshell.action.shell.ExportCommandHistoryAction"
+                 label="Export command history"
+                 menubarPath="export"
+                 style="push"
+                 tooltip="Exports the history of processed commands to a file"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.ExportShellOutputAction"
+                 icon="img/shellExportOutput.gif"
+                 id="net.sf.wickedshell.action.shell.ExportShellOutputAction"
+                 label="Export shell output"
+                 menubarPath="export"
+                 style="push"
+                 tooltip="Exports the output of the shell to a file"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.ClearCommandHistoryAction"
+                 icon="img/shellClearHistory.gif"
+                 id="net.sf.wickedshell.action.shell.ClearCommandHistoryAction"
+                 label="Clear command history"
+                 style="push"
+                 toolbarPath="general"
+                 tooltip="Clears the command history of all Shells"/>
+           <action
+                 class="net.sf.wickedshell.action.shell.SetScrolllockAction"
+                 icon="img/scrolllock.gif"
+                 id="net.sf.wickedshell.action.shell.SetScrolllockAction"
+                 label="Scroll Lock"
+                 style="toggle"
+                 toolbarPath="manage_internal"
+                 tooltip="En-/Disables the scroll lock for the shell."/>
+           <action
+                 class="net.sf.wickedshell.action.shell.ClearShellAction"
+                 icon="img/clearScreen.gif"
+                 id="net.sf.wickedshell.action.shell.ClearShellAction"
+                 label="Clear Shell"
+                 style="push"
+                 toolbarPath="manage_internal"
+                 tooltip="Clears this Shell"/>
+        </viewContribution>
+     </extension>
+</plugin>

@@ -1,0 +1,9 @@
+plugins
+features
+build.xml
+build.properties
+scp.properties
+logs.zip
+updatesite.properties
+content.jar
+artifacts.jar

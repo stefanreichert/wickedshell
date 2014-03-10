@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="net.sf.wickedshell" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="net.sf.wickedshell" id="shell" name="net.sf.wickedshell.shell"/>
+      </appInfo>
+      <documentation>
+         [Enter description of this extension point.]
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+         <documentation>
+            The &lt;i&gt;Extension Point&lt;/I&gt; defines descriptors for external shells.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="descriptor"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="descriptor">
+      <annotation>
+         <appInfo>
+            <meta.element labelAttribute="name"/>
+         </appInfo>
+         <documentation>
+            The element &lt;i&gt;descriptor&lt;/i&gt; defines a descriptor for a particular external shell. It defines how Wicked Shell can interact appropriately to provide an integrated instance of the described shell.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="operatingSystem"/>
+            <element ref="executableFile"/>
+         </sequence>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The unique id of the shell.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The unique name of the shell.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="executable" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The shell executable, for example &quot;cmd.exe&quot; or &quot;bash.bat -l -i&quot;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="pathDelimiter" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The string which delimits the path information in the shell&apos;s display, so it&apos;s the last character(s) of the prompt which do(es) not belog to the path. For cmd.exe it is &quot;&gt;&quot;. You must use the &apos;_&apos; letter for a blank.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="pathSeparator" use="required">
+            <annotation>
+               <documentation>
+                  The separator of the path, for Linux it is the slash (&quot;/&quot;), for Windows is the backslash (&quot;\&quot;). Take care, the separator of your shell may be different to that of your OS.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="SLASH">
+                  </enumeration>
+                  <enumeration value="BACKSLASH">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="commandDelimiter" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The delimiter string used by the shell to allow executing cacscading commands
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="systemPathSeparator" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The string delimiting a system path entry. Usually this depends on the OS, but some  shells rewrite the systems path.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="lineFeed" use="required">
+            <annotation>
+               <documentation>
+                  The string which is used for the NEW_LINE or ENTER command of the shell. Writing this string in the shell&apos;s input String should result in executing the latest command.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="CR/LF">
+                  </enumeration>
+                  <enumeration value="LF only">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="characterEncoding" use="required">
+            <annotation>
+               <documentation>
+                  The character encoding which is used by the shell. &apos;Default&apos; will use the OS default encoding.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="US-ASCII">
+                  </enumeration>
+                  <enumeration value="ISO-8859-1">
+                  </enumeration>
+                  <enumeration value="UTF-8">
+                  </enumeration>
+                  <enumeration value="UTF-16LE">
+                  </enumeration>
+                  <enumeration value="UTF-16BE">
+                  </enumeration>
+                  <enumeration value="CP437">
+                  </enumeration>
+                  <enumeration value="CP1252">
+                  </enumeration>
+                  <enumeration value="Default">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="hasCustomRoot" type="boolean" use="required">
+            <annotation>
+               <documentation>
+                  Defines whether the shell has a custom root. For example, Cygwin or MSys have custom root directories.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="binariesDirectory" type="string">
+            <annotation>
+               <documentation>
+                  In case of a cutom root directory, the binary directory may be definied.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="isExecutedCommandProvided" type="boolean" use="required">
+            <annotation>
+               <documentation>
+                  Defines whether the executed command that was written to the shell&apos;s inputstream is reurned by the shell&apos;s outputstream.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="isUILineFeedProvided" type="boolean" use="required">
+            <annotation>
+               <documentation>
+                  Defines whether the line feed is provided by the shell&apos;s outputstream after a command was executed.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="environmentalValueProvider" type="string">
+            <annotation>
+               <documentation>
+                  A class providing the enviromental values of the shell to be displayed in the command completion.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="net.sf.wickedshell.provider.IEnvironmentalValueProvider"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="externalShellInvoker" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="net.sf.wickedshell.facade.descriptor.manage.IExternalShellInvoker"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="commandProvider" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="net.sf.wickedshell.facade.descriptor.command.ICommandProvider"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="operatingSystem">
+      <annotation>
+         <appInfo>
+            <meta.element labelAttribute="name"/>
+         </appInfo>
+         <documentation>
+            The list of all operating systems, which support the shell.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="name" use="required">
+            <annotation>
+               <documentation>
+                  The name of the supporting OS.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="Windows 95">
+                  </enumeration>
+                  <enumeration value="Windows 98">
+                  </enumeration>
+                  <enumeration value="Windows NT">
+                  </enumeration>
+                  <enumeration value="Windows 2000">
+                  </enumeration>
+                  <enumeration value="Windows 2003">
+                  </enumeration>
+                  <enumeration value="Windows Server 2003">
+                  </enumeration>
+                  <enumeration value="Windows XP">
+                  </enumeration>
+                  <enumeration value="Windows NT (unknown)">
+                  </enumeration>
+                  <enumeration value="Windows Vista">
+                  </enumeration>
+                  <enumeration value="Windows 7">
+                  </enumeration>
+                  <enumeration value="Linux">
+                  </enumeration>
+                  <enumeration value="Mac OS X">
+                  </enumeration>
+                  <enumeration value="Unix">
+                  </enumeration>
+                  <enumeration value="FreeBSD">
+                  </enumeration>
+                  <enumeration value="Irix">
+                  </enumeration>
+                  <enumeration value="hp-ux">
+                  </enumeration>
+                  <enumeration value="aix">
+                  </enumeration>
+                  <enumeration value="SunOS">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="executableFile">
+      <annotation>
+         <appInfo>
+            <meta.element labelAttribute="description"/>
+         </appInfo>
+         <documentation>
+            Executable files are listed in the command completion, and if marked as Batch File, listable in the Batch Files - View.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="extension" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The extension of these executable files.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="description" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The description of these type of files.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="isBatchFile" type="boolean" use="required">
+            <annotation>
+               <documentation>
+                  Defines whether these type of files are text based and should be listable in the Batch Files - View.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

@@ -1,0 +1,11 @@
+*********************************
+** WickedShell - Release 2.0.6 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.6 of Wicked Shell. 
+
+* 22.12.2009 *
+	- Add encoding CP437 (for cmd.exe and command.com)
+* 20.01.2010 *
+	- Windows 7 compatibility fixed (default shell added)

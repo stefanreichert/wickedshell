@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Manual
+Bundle-SymbolicName: net.sf.wickedshell.documents
+Bundle-Version: 2.0.2
+Bundle-Localization: plugin
+Require-Bundle: org.apache.fop,
+ net.sourceforge.docbook,
+ com.icl.saxon
+Bundle-Vendor: Stefan Reichert

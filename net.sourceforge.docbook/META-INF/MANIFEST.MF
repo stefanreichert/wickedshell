@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DocBook XSL Plug-in
+Bundle-SymbolicName: net.sourceforge.docbook
+Bundle-Version: 1.67.2
+Bundle-Vendor: Docbook
+Bundle-Localization: plugin

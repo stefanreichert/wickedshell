@@ -1,0 +1,346 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3b2/docbookx.dtd">
+<book>
+
+  <bookinfo>
+
+    <title>Wicked Shell</title>
+
+    <subtitle>Wicked Shell - Documentation</subtitle>
+
+    <releaseinfo>Version 2.0.2</releaseinfo>
+
+    <pubdate>(Work in progress)</pubdate>
+
+    <authorgroup>
+
+      <author><firstname>Stefan</firstname><surname>Reichert</surname></author>
+
+    </authorgroup>
+
+  </bookinfo>
+
+  <toc />
+  <part>
+
+    <title>Quick Guide</title>
+
+    <chapter>
+
+      <title>Introduction</title>
+
+      <section>
+
+        <title>What is Wicked Shell?</title>
+
+        <para>Before I start to explain how Wicked Shell works, 
+        I&apos;d like to take a word about what Wicked Shell is and 
+        what not. Wicked Shell is an eclipse plugin which functions as 
+        mediator between a Runtime process and a SWT Text widget. That 
+        means the output of the Runtime process is transferred to the 
+        widget and the text typed in the widget is transferred to the 
+        process as input. So Wicked Shell is not an actual shell but 
+        only uses an existing shell implementation.</para>
+
+      </section>
+
+      <section>
+
+        <title>Overview of functionality</title>
+
+        <para>As I said, Wicked Shell is an eclipse plugin. After 
+        installation, your eclipse distribution offers two more views. 
+        The Shell - View provides the access to the used shell 
+        implementation. You see the output of the shell and you can 
+        type your commands. As a funky feature, a command completion is 
+        provided. There are different types of completions.</para>
+
+        <para>
+
+          <itemizedlist>
+
+            <listitem>
+
+              <para>Active folder completions</para>
+
+              <para>These completions are computed by inspecting the 
+              active folder for executable files.</para>
+
+            </listitem>
+
+            <listitem>
+
+              <para>System path completions</para>
+
+              <para>These completions are computed by inspecting the 
+              system path.</para>
+
+            </listitem>
+
+            <listitem>
+
+              <para>Static completions</para>
+
+              <para>These completions are static and may be adjusted in 
+              the Preferences Page.</para>
+
+            </listitem>
+
+            <listitem>
+
+              <para>Cascading completions</para>
+
+              <para>These completions are computed depending on a 
+              command or folder prefix entered as command.</para>
+
+            </listitem>
+
+          </itemizedlist>
+
+          You may configure on the preferences page which entries are 
+          suggested in the command completion. If the shell reports 
+          errors, these are additionally printed to the 
+          ShellErrorDisplay which can be open from the Shell - 
+          View&apos;s menubar. The menubar as well offers action to 
+          restart the current shell or open an additional Shell - View.
+        </para>
+
+        <para>The second view is the Batch Files - View which offers a 
+        quite simple list to manage often used executables. These files 
+        may be listed here and then directly executed in the Shell - 
+        View. You may also define parameters for execution. The Batch - 
+        View shows also the content of the selected batch file in the 
+        list.</para>
+
+      </section>
+
+      <section>
+
+        <title>Support and Feature Requests</title>
+
+        <para>Wicked Shell works pretty well, from my point of view 
+        :-). But there might be something missing to make it suitable 
+        for you. If so, do everyone a favour and post a feature 
+        request. To do that, go to 
+        http://sourceforge.net/projects/wickedshell/. If you find any 
+        bugs, please report it as well at Sourceforge. Any other 
+        comments (even positiv ones) are welcome as well.</para>
+
+      </section>
+
+    </chapter>
+
+    <chapter>
+
+      <title>Getting started</title>
+
+      <section>
+
+        <title>Download</title>
+
+        <para>The fact that you read this manual states that you have 
+        already discovered the Wicked Shell project home at 
+        http://sourceforge.net/projects/wickedshell/. But anyway, this 
+        section is mandatory in a manual, isn&apos;t it? OK, the 
+        binaries and sources of the Wicked Shell eclipse plugin are 
+        available at the download area. In the future, an update site 
+        will be available.</para>
+
+      </section>
+
+      <section>
+
+        <title>Installation</title>
+
+        <para>Once you have downloaded the plugin, just extract it into 
+        your eclipse distribution directory. If you download and 
+        install an update of Wicked Shell (e.g. from 1.2.0 to 1.3.0), 
+        you might find it necessary to start your eclipse worbench with 
+        the -clean parameter the first time after installation. If you 
+        discover a SerialisationException on startup, please file a bug 
+        with the error text, I know the problem and I&apos;ll try to 
+        help. I haven&apos;t found a solution to avoid that phenomenon 
+        though.</para>
+
+      </section>
+
+      <section>
+
+        <title>Wicked Shell</title>
+
+        <para>After the startup of your eclipse distribution, 
+        you&apos;ll find the two views described in the introduction. 
+        If you want to adjust the command completion or select another 
+        shell to be used instead of the default shell for your OS, just 
+        use the preferences page. Currently, only Windows is 
+        &apos;really&apos; supported. I wrote a Shell descriptor for 
+        Linux bash as well, but it is not well tested. Therefor, for 
+        Linux in particular, I am always happy to get feedback, even 
+        positiv.</para>
+
+        <para>If you decide to select a different Shell than the 
+        default, please ensure it to be installed.</para>
+
+      </section>
+
+    </chapter>
+
+    <chapter>
+
+      <title>Cygwin and MSYS</title>
+
+      <section>
+
+        <title>Choosing another shell</title>
+
+        <para>Wicked Shell uses a default shell for different OS. 
+        Currently, this is bash for Linux and Cmd.exe for Microsoft 
+        Windows. Additionally, Cygwin and MSYS can be used with Wicked 
+        Shell when using Microsoft Windows. To do so, open the 
+        preferences page and select the shell you want. For Linux, only 
+        bash is currently provided.</para>
+
+      </section>
+
+      <section>
+
+        <title>Configuration</title>
+
+        <para>When using Cygwin or MSYS, a little speciality comes in. 
+        Both consider their installation directory as the system&apos;s 
+        root directory. Therefor you need to define this installation 
+        directory at the preferences page. It&apos;s necessary as 
+        Wicked Shell needs this information for providing a command 
+        completion.</para>
+
+        <para>Cygwin as well as MSYS allows configure the style of the 
+        prompt. Both use as well as the common Linux bash the 
+        enviromental value PS1. If you leave this value at it&apos;s 
+        default, Wicked Shell&apos;s ShellView will look quite funny as 
+        ther will occure ASCII escape characters which cannot be 
+        displayed by the SWT Text widget. So you need to define a 
+        Wicked Shell compatible prompt in order to get a readable 
+        prompt and have a command completion. There are a couple of 
+        options you can choose, I myself prefer a two line prompt: One 
+        to display all my favorite information which I am used from my 
+        Linux bash like time, user and host. The second line provides 
+        the necessary information for Wicked Shell. The current full 
+        path and the separator &apos;&amp; &apos; which both are 
+        required as last line. To define the PS1 value simply type 
+        <code>PS1=\\t&apos; &apos;\\u&apos;@&apos;\\H\\r\\n\\w&apos; $ 
+        &apos;</code> as command in the ShellView, this will result in 
+        the prompt described above. Please refer to the manual for 
+        bash/sh for other prompt content. You might as well automate 
+        the setting of the prompt. With Cygwin, just add the PS1 
+        dfinition to the <filename>.bashrc</filename> file in your 
+        cygwin user&apos;s home directory. MSYS allows the editing of 
+        the <filename>profile</filename> file in the etc folder of the 
+        MSYS root so you just add the PS1 definition there.</para>
+
+      </section>
+
+    </chapter>
+
+    <chapter>
+
+      <title>Extension Points</title>
+
+      <section>
+
+        <title>Why offer an Extension Point ?</title>
+
+        <para>Well, the first feature request, that came in, were 
+        requests for other shells to be integrated. So what could be 
+        better than enable everyone to integrate his or her favorite 
+        shell. Defining a so called descriptor for your own shell is 
+        quite easy, lets have a look.</para>
+
+      </section>
+
+      <section>
+
+        <title>Shell Descriptors</title>
+
+        <para>I mentioned it before, Wicked Shell is not a real shell. 
+        To make the text transfer work, both starems, inpu - and 
+        outputstream, need to be configured. This configuration is 
+        called ShellDescriptor. Wicked Shell offers the extension point 
+        <emphasis>net.sf.wickedshell.shell</emphasis> to define a 
+        descriptor. A ShellDescriptor consists of different 
+        information. First of all, there are different parsing 
+        parameters like the character that marks the end of the 
+        shell&apos;s prompt, the path delimiter of the shell or if the 
+        shell provides a UI line feed within it&apos;s output captured 
+        by Wicked Shell.</para>
+
+        <para>Furthermore each shell requires different handling of 
+        special topics. For example, at cmd.exe, a change of directory 
+        requires setting the right drive. So a ShellDescriptor always 
+        references classes that implement specific interfaces and 
+        fulfil these tasks.</para>
+
+        <para>
+
+          <figure>
+
+            <title>The ShellDescriptor extension describes how to 
+            interpret the character stream from the shell&apos;s 
+            process</title>
+
+            <mediaobject><imageobject><imagedata align="center"
+             fileref="figures/figure_shell_descriptor_extension.jpg"
+             format="JPG"/></imageobject></mediaobject>
+          </figure>
+
+        </para>
+
+        <para>In the next few lines, we&apos;ll take a closer look on 
+        the different attributes of ShellDescriptor.</para>
+
+        <itemizedlist>
+
+          <listitem>
+
+            <para>Attribute <emphasis>ID</emphasis></para>
+
+            <para>The attribute <emphasis>ID</emphasis> represent the 
+            unique identifier for the shell descriptor. The ID is used 
+            to store specific information for the shell 
+            described.</para>
+
+          </listitem>
+
+          <listitem>
+
+            <para>Attribute <emphasis>name</emphasis></para>
+
+            <para>The attribute <emphasis>name</emphasis> defines a 
+            human readable name for the shell described. The name 
+            should be unique in order to allow to differ between the 
+            shells. The <emphasis>name</emphasis> is initially 
+            displayed in the title section of the ShellView.</para>
+
+          </listitem>
+
+          <listitem>
+
+            <para>Attribute <emphasis>executable</emphasis></para>
+
+            <para>The attribute <emphasis>executable</emphasis> defines 
+            the executable which launches the shell. The string must 
+            contain the corresponding command and all additional 
+            suffixes (e.g. cmd.exe /c) . It must not contain any path 
+            information.</para>
+
+          </listitem>
+
+        </itemizedlist>
+
+      </section>
+
+    </chapter>
+
+  </part>
+
+</book>
+

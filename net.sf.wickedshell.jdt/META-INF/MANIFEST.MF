@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wicked Shell JDT support Plug-in
+Bundle-SymbolicName: net.sf.wickedshell.jdt; singleton:=true
+Bundle-Version: 2.0.7
+Bundle-Vendor: Stefan Reichert
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.jdt.core;resolution:=optional,
+ org.eclipse.core.resources;resolution:=optional,
+ net.sf.wickedshell
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

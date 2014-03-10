@@ -1,0 +1,19 @@
+*********************************
+** WickedShell - Release 1.4.0 **
+**        Release-Notes        **
+*********************************
+
+This is release 1.4.0 of WickedShell. 
+
+It contains the following enhancements:
+
+    - Allow customizing foreground color, background color and 
+      font at the preferences page (Feature Request 1498053)
+    - Introduced actions for stop, restart and clear shell in
+      the toolbar
+    - Add completion for cascading folder and file parts in 
+      commands (e.g. cd temp/foo/b)
+    - Allow parameter definition for listed Batch Files
+      (Feature Request 1533273)
+    - Allow keeping the history of executed commands
+    - Allow multiple Shells

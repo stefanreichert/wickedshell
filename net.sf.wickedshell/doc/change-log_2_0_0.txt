@@ -1,0 +1,56 @@
+*********************************
+** WickedShell - Release 2.0.0 **
+**         Change-Log          **
+*********************************
+
+This is release 2.0.0 of Wicked Shell. 
+
+* 13.08.2006 *
+    - Refactor ShelDescriptor management
+      --> Define ShellDescriptors by Extension Point
+
+* 15.08.2006 *
+    - Refresh Shell/Batch-View on preferences
+      change
+    - Clear command history shell dependant
+    - Batch File stored shell dependant
+    
+* 29.08.2006 *
+    - Projects splitted
+        - net.sf.wickedshell 
+           --> Implementation and default shells
+        - net.sf.wickedshell.shell
+           --> Additional shells
+    - Feature net.sf.wickedshell.feature introduced
+	
+* 06.09.2006 *
+    - Update Site implemented (Feature Request 1496693)
+    - Copy (Ctrl+c) enabled (Bug 1544716)
+
+* 07.09.2006 *
+    - Corrected 'Change to folder' function by using OS 
+      path string
+    - Scroll lock introduced for Shell View
+    - Show completions on TAB key hit (Feature Request 1554128)
+* 17.10.2006 *
+    - Fixed cascading path completion with blanks (Bug 1539555)
+    - Refactoring: Splitted shell facade (IShellFacade) and UI (IShellViewer)
+    - Substituted Content Assist (Eclipse 3.1) by Field Assist (Eclipse 3.2)
+* 19.10.2006 *
+    - Introduced org.apache.xmlbeans to substitute object serialisation
+    - Introduce net.sf.wickedshell.domain for persistency
+    - Refactored persistence of batch file list using xmlbeans
+* 22.10.2006 *
+    - Refactored persistence of static completions using xmlbeans
+    - Refactored persistence of command history using xmlbeans
+* 23.10.2006 *
+    - Refactored persistence of shell style using xmlbeans
+    - Refactored persistence of shell descriptor properties using xmlbeans
+    - Fixed linux bash problems with object serialisation (Bug 1498868)
+* 24.10.2006 *
+    - Introduced net.sf.wickedshell.ui to expose ui elements 
+    - Export shell output added (Feature Request 1578879)
+* 25.10.2006 *
+    - Introduced net.sf.wickedshell.ui to expose ui elements 
+    - Export command history added (Feature Request 1578880)
+    - Use OS String on 'Change to folder in shell' (Bug 1560626)

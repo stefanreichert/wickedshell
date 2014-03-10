@@ -1,0 +1,15 @@
+*********************************
+** WickedShell - Release 2.0.3 **
+**        Release Notes        **
+*********************************
+
+This is release 2.0.3 of Wicked Shell. 
+
+It contains the following enhancements:
+
+	- Secured loading of the stored Wicked Shell configuration (auto reset on error)
+    - Provide confirmation dialog on closing of a detached ShellView (Bugfix 1745173)
+    - "Add static completion" corrected (Bugfix 1772183)
+    - Open console for resource (files) (Feature Request 1778454)
+	- Provide selection for shell when multiple shells are open (Feature Request 1779965 & 1560429)
+	- List of supported OSes corrected (Unix (like) OSes removed, Windows Server 2003 added)

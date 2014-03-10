@@ -1,0 +1,11 @@
+*********************************
+** WickedShell - Release 2.0.5 **
+**        Release Notes        **
+*********************************
+
+This is release 2.0.5 of Wicked Shell. 
+
+It contains the following enhancements:
+
+	- Windows 7 compatability
+	- Edit static completions

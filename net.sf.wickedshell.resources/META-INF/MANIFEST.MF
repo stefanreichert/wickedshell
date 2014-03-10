@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wicked Shell Resources support Plug-in
+Bundle-SymbolicName: net.sf.wickedshell.resources; singleton:=true
+Bundle-Version: 2.0.7
+Bundle-Vendor: Stefan Reichert
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ net.sf.wickedshell,
+ org.eclipse.core.resources;resolution:=optional,
+ net.sf.wickedshell.domain,
+ org.apache.xmlbeans
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
